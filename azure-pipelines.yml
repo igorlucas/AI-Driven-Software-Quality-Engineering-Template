@@ -1,0 +1,26 @@
+trigger:
+  branches:
+    include:
+      - "*"
+
+pr:
+  branches:
+    include:
+      - "*"
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: "3.11"
+    displayName: Set up Python
+
+  - script: python automation/run_quality_checks.py
+    displayName: Run framework quality checks
+
+  - publish: reports/generated/
+    artifact: traceability-validation
+    displayName: Publish validation report and evidence
+    condition: always()

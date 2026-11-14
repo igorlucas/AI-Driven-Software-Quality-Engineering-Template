@@ -1,8 +1,11 @@
 # Next steps
 
-The stage order is in `traceability-matrix.md`. The lifecycle frame is in `quality-system.md`. A stage moves forward only after the previous one has an executed proof. Before accepting the next stage, re-run the automated tests of the stages already closed.
+The stage order is in `traceability-matrix.md`; lifecycle links are in `../traceability/records.json`. Use `quality-system.md` for evidence and release gates. Plan validation continuously alongside development and select regression scope from change impact and risk.
 
-1. Stage 1. `<not started>`.
-2. Stage 2. Starts after stage 1.
+1. Requirements and acceptance criteria: `<owner / status>`.
+2. Risk assessment and validation strategy: `<owner / status>`.
+3. Development tasks, changes, and reviews: `<task IDs / status>`.
+4. Tests, evidence, and reports: `<IDs / status>`.
+5. Release and production follow-up: `<release / observation IDs>`.
 
-When a stage closes, replace the line with the date, the report path, the three channels, and anything deferred with its impediment and moment.
+Record blockers and deferred validation with the impediment, owner, and condition/date for revalidation.

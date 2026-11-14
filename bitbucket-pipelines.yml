@@ -1,0 +1,17 @@
+image: python:3.11
+
+definitions:
+  steps:
+    - step: &framework-quality
+        name: Framework quality
+        script:
+          - python automation/run_quality_checks.py
+        artifacts:
+          - reports/generated/**
+
+pipelines:
+  default:
+    - step: *framework-quality
+  pull-requests:
+    "**":
+      - step: *framework-quality
