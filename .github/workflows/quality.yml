@@ -8,10 +8,15 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: framework-quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   traceability:
     name: Validate lifecycle traceability
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -28,3 +33,4 @@ jobs:
           name: traceability-validation
           path: reports/generated/
           if-no-files-found: warn
+          retention-days: 30

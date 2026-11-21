@@ -4,6 +4,11 @@ This repository is a reusable framework for building software with quality evide
 
 The framework combines human-readable working templates with a machine-readable traceability registry, a local validator/report generator, and a GitHub Actions gate. It does not assume a particular application stack or claim that a passing framework check proves product quality.
 
+## Prerequisites
+
+- Python 3.11 or newer
+- A POSIX shell or PowerShell with Python available on `PATH`
+
 ## Start here
 
 1. Copy the framework into the product repository (or use this repository as the project quality system). Keep the platform-neutral `automation/` command and choose the matching CI adapter: `.github/workflows/quality.yml`, `.gitlab-ci.yml`, `bitbucket-pipelines.yml`, or `azure-pipelines.yml`.
@@ -15,6 +20,8 @@ The framework combines human-readable working templates with a machine-readable 
 7. Record post-release observations and feed incidents, recurring defects, and decisions back into [knowledge/](knowledge/).
 
 Read [quality-system.md](quality-system.md) for lifecycle gates, evidence rules, and the migration path. AI prompt templates live in [ai/prompts/](ai/prompts/).
+
+For repository contributions, validation commands, and pull-request expectations, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Gap analysis: current template → target framework
 

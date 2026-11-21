@@ -1,0 +1,29 @@
+name: Bug report
+description: Report a framework or documentation defect
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Run ...
+        2. Observe ...
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and traceability
+      description: Link any REQ, RISK, QA, or release IDs affected.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include sanitized logs or command output. Remove secrets.
