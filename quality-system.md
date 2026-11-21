@@ -35,6 +35,8 @@ Prompts under `ai/prompts/` request structured drafts and explicit uncertainty. 
 
 Run `python3 automation/run_quality_checks.py` locally. The GitHub Actions, GitLab CI, Bitbucket Pipelines, and Azure Pipelines adapters invoke the same command and publish its report plus digest manifest for the framework validation run. Any CI runner with Python 3.11+ can invoke the same command. In Azure Repos Git, use a branch-policy build validation for pull requests. The manifest is not evidence that product tests passed. Add product builds and tests to the relevant CI pipeline; this framework has no application code to test.
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow and [automation/README.md](automation/README.md) for focused test examples.
+
 Incidents, production observations, recurring defects, lessons, and decisions belong under `knowledge/` or `production/`. Link observations to releases and follow-up tasks so operational evidence updates the next planning cycle.
 
 ## Migration from the original template
